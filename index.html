@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do Campo ao Copo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <input type="checkbox" id="toggle-font" hidden>
+  <input type="checkbox" id="toggle-contrast" hidden>
+  <input type="checkbox" id="toggle-accessibility" hidden>
+  <input type="checkbox" id="carousel-play" hidden>
+
+  <!-- Inputs do carrossel -->
+  <input type="radio" name="carousel" id="img1" checked hidden>
+  <input type="radio" name="carousel" id="img2" hidden>
+  <input type="radio" name="carousel" id="img3" hidden>
+
+  <div class="acessibilidade-wrapper">
+    <label for="toggle-accessibility" class="accessibility-fixed" aria-label="Menu de acessibilidade">A+</label>
+
+    <div class="accessibility-menu hidden">
+      <label for="toggle-font">Aumentar/Diminuir Fonte</label>
+      <label for="toggle-contrast">Alto Contraste</label>
+    </div>
+
+    <header class="header">
+      <div class="logo">
+        <a href="#inicio"><img src="./img/logo.png" alt="Logo Agrinho" /></a>
+      </div>
+      <div class="site-title">Do Campo ao Copo: A Jornada do Malte em Guarapuava</div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="hamburger" aria-label="Abrir menu">☰</label>
+        <ul class="nav-links">
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#quiz">Quizz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="reveal visible">
+        <h1>Bem-vindo ao nosso projeto!</h1>
+        <p>
+          Em Guarapuava, o campo e a cidade se conectam através da <strong>cevada</strong>, grão que se transforma em
+        malte e chega às mesas de todo o Brasil. A <strong>Cooperativa Agrária</strong>, com sua maltaria moderna, é o
+        coração dessa jornada, mostrando como o trabalho rural abastece a vida urbana. Este projeto celebra essa união,
+        essencial para festejos, pães e até a cerveja que anima nossas comemorações!
+        </p>
+      </section>
+
+      <section id="galeria" class="reveal visible">
+        <h2>Galeria: Do Plantio ao Produto Final</h2>
+        <div class="carousel-container">
+          <label for="img3" class="carousel-btn control-prev img1">◄</label>
+          <label for="img1" class="carousel-btn control-prev img2">◄</label>
+          <label for="img2" class="carousel-btn control-prev img3">◄</label>
+
+          <div class="carousel-wrapper">
+            <div class="carousel-slide">
+              <div class="carousel-images">
+                <img src="./img/campo.png" alt="Campo">
+                <img src="./img/malte.png" alt="Malte">
+                <img src="./img/cidade.png" alt="Cidade">
+              </div>
+            </div>
+          </div>
+
+          <label for="img2" class="carousel-btn control-next img1">►</label>
+          <label for="img3" class="carousel-btn control-next img2">►</label>
+          <label for="img1" class="carousel-btn control-next img3">►</label>
+        </div>
+
+        <div class="carousel-controls">
+          <label for="carousel-play" class="carousel-btn">▶⏸</label>
+        </div>
+      </section>
+
+      <section id="video" class="reveal visible">
+        <h2>Vídeo: A Cadeia Produtiva do Malte</h2>
+        <div class="video-container">
+          <video controls>
+            <source src="./img/cadeia produtiva.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+      </section>
+
+      <section id="quiz" class="reveal visible">
+  <h2>Quiz: Você conhece a jornada do malte?</h2>
+
+  <!-- Caixa de Controle -->
+  <input type="checkbox" id="quiz-toggle" hidden>
+
+  <form class="quiz-form">
+    <div class="quiz-question">
+      <p>1. Qual é a primeira etapa na produção do malte?</p>
+      <label><input type="radio" name="q1" required> Plantio da cevada</label>
+      <label><input type="radio" name="q1"> Secagem do malte</label>
+      <label><input type="radio" name="q1"> Transporte para cidade</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>2. Onde o malte é mais utilizado?</p>
+      <label><input type="radio" name="q2" required> Fabricação de cerveja</label>
+      <label><input type="radio" name="q2"> Construção civil</label>
+      <label><input type="radio" name="q2"> Fabricação de roupas</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>3. Qual cidade é destaque na produção de malte no Paraná?</p>
+      <label><input type="radio" name="q3" required> Guarapuava</label>
+      <label><input type="radio" name="q3"> Curitiba</label>
+      <label><input type="radio" name="q3"> Londrina</label>
+    </div>
+
+    <label for="quiz-toggle" class="quiz-submit-btn">Enviar</label>
+  </form>
+
+  <div class="quiz-result">
+    <p>Obrigado por participar! 🚜🌾</p>
+  </div>
+</section>
+
+
+      <section id="contato" class="reveal visible">
+        <h2>Contato</h2>
+        <p>Prof. Responsável: Willian Schön Lopes</p>
+        <p>Email: lopes.willian@escola.pr.gov.br</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Concurso Agrinho | Colégio Estadual Professor Pedro Carli</p>
+      <div class="social-links">
+        <a href="https://github.com/schonlopes" target="_blank">
+          <img src="./img/github.png" alt="GitHub" class="social-icon" />
+        </a>
+        <a href="https://www.instagram.com/schonlopes" target="_blank">
+          <img src="./img/instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
